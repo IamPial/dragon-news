@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <div className="container mx-auto grid grid-cols-12 gap-6 my-18">
       <div className=" col-span-3 rounded-md">
-        <LeftSideBar categories={categories} />
+        <LeftSideBar categories={categories} activeId={"05"} />
       </div>
       <div className="bg-indigo-100 col-span-6 rounded-md">
         <h2>Dragon News Home</h2>
