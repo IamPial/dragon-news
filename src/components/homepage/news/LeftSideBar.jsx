@@ -1,6 +1,6 @@
 import React from "react";
 
-const LeftSideBar = ({ categories }) => {
+const LeftSideBar = ({ categories, activeId }) => {
   return (
     <div>
       <h2 className="text-[#403F3F] font-semibold text-xl">All Category</h2>
@@ -9,7 +9,8 @@ const LeftSideBar = ({ categories }) => {
           return (
             <li
               key={category.category_id}
-              className="bg-[#E7E7E7] px-18 py-4 rounded-md font-semibold text-[#403F3F] text-center"
+              className={` 
+                ${activeId === category.category_id && "bg-[#E7E7E7] font-semibold text-[#403F3F]"}  px-18 py-4 rounded-md font-medium   text-[#9F9F9F] text-center`}
             >
               {category.category_name}
             </li>
