@@ -39,7 +39,7 @@ const BreakingNews = () => {
       </div>
       <Marquee speed={100} pauseOnHover={true}>
         {news.map((n) => (
-          <span key={n.id} className="ml-4">
+          <span key={n.id} className="ml-4 font-semibold text-lg text-gray-700">
             {n.title} !{" "}
           </span>
         ))}
