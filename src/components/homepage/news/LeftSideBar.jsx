@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const LeftSideBar = ({ categories, activeId }) => {
@@ -10,9 +11,14 @@ const LeftSideBar = ({ categories, activeId }) => {
             <li
               key={category.category_id}
               className={` 
-                ${activeId === category.category_id && "bg-[#E7E7E7] font-semibold text-[#403F3F]"}  px-18 py-4 rounded-md font-medium   text-[#9F9F9F] text-center`}
+                ${activeId === category.category_id && "bg-[#E7E7E7] font-semibold text-[#403F3F]"}   rounded-md font-medium   text-[#9F9F9F] text-center`}
             >
-              {category.category_name}
+              <Link
+                href={`/category/${category.category_id}`}
+                className="block px-18 py-4"
+              >
+                {category.category_name}
+              </Link>
             </li>
           );
         })}
