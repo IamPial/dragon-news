@@ -1,4 +1,5 @@
 import LeftSideBar from "@/components/homepage/news/LeftSideBar";
+import RightSideBar from "@/components/homepage/news/RightSideBar";
 
 const getCategories = async () => {
   const res = await fetch(
@@ -19,8 +20,8 @@ export default async function Home() {
       <div className="bg-indigo-100 col-span-6 rounded-md">
         <h2>Dragon News Home</h2>
       </div>
-      <div className="bg-violet-100 col-span-3 rounded-md">
-        <h2>Login With</h2>
+      <div className=" col-span-3 rounded-md">
+        <RightSideBar />
       </div>
     </div>
   );
