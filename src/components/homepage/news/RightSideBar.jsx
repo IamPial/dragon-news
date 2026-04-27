@@ -7,6 +7,12 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
+import swimmingImg from "@/assets/swimming.png";
+import classImg from "@/assets/class.png";
+import playgroundImg from "@/assets/playground.png";
+import bgImg from "@/assets/bg.png";
+import Image from "next/image";
+
 const RightSideBar = () => {
   return (
     <div>
@@ -42,6 +48,20 @@ const RightSideBar = () => {
             Instagram
           </li>
         </ul>
+      </div>
+
+      <div className="bg-[#F3F3F3] mt-5">
+        <h2 className="text-[#403F3F] font-semibold text-xl py-4 px-2">
+          Q-Zone
+        </h2>
+        <div className="space-y-2 py-4">
+          <Image src={swimmingImg} alt="swimming" className="mx-auto" />
+          <Image src={classImg} alt="classRoom" className="mx-auto" />
+          <Image src={playgroundImg} alt="playground" className="mx-auto" />
+        </div>
+      </div>
+      <div className="py-5">
+        <Image src={bgImg} alt="backgroundImg" className="mx-auto" />
       </div>
     </div>
   );
