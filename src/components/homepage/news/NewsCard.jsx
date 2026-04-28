@@ -6,7 +6,6 @@ import { format } from "date-fns";
 import Link from "next/link";
 
 const NewsCardPage = ({ news }) => {
-  console.log(news);
   return (
     <div>
       <div className="card bg-base-100  border border-gray-200 my-4 ">
@@ -48,10 +47,6 @@ const NewsCardPage = ({ news }) => {
         </div>
         <div className=" p-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <FaStar className="text-[#ff8c47]" />
-            <FaStar className="text-[#ff8c47]" />
-            <FaStar className="text-[#ff8c47]" />
-            <FaStar className="text-[#ff8c47]" />
             <FaStar className="text-[#ff8c47]" />
             <p className="text-gray-400">{news.rating?.number}</p>
           </div>
