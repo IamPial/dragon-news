@@ -4,6 +4,15 @@ import { getNewsDetailsById } from "@/lib/data";
 import { BsArrowLeft } from "react-icons/bs";
 import RightSideBar from "@/components/homepage/news/RightSideBar";
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const news = await getNewsDetailsById(id);
+  return {
+    title: news?.title,
+    description: news?.description,
+  };
+}
+
 const NewsDetailsPage = async ({ params }) => {
   const { id } = await params;
   const news = await getNewsDetailsById(id);
