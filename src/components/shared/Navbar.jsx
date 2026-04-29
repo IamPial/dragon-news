@@ -20,9 +20,12 @@ const Navbar = () => {
       </ul>
       <div className="flex items-center justify-end gap-2 ">
         <Image src={userAvatar} alt={"avatar"} width={40} height={40} />
-        <button className="bg-[#403F3F] btn text-white px-10 font-semibold text-xl rounded-none">
-          <Link href={"/login"}>Login</Link>
-        </button>
+        <Link
+          href={"/login"}
+          className="bg-[#403F3F] btn text-white px-10 font-semibold text-xl rounded-none"
+        >
+          Login
+        </Link>
       </div>
     </div>
   );
