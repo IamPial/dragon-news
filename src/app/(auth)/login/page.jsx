@@ -1,13 +1,25 @@
+"use client";
 import Link from "next/link";
 
 const LoginPage = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+  };
+
   return (
     <div className="pt-8 pb-12  flex justify-center  flex-col items-center container mx-auto">
       <h2 className="font-semibold text-[35px] my-3 text-[#403F3F]">
         Login your account
       </h2>
       <div className="divider h-0.5 bg-gray-50 p-0 m-0 w-md mb-4 mx-auto"></div>
-      <form className=" bg-base-200 shadow-xs rounded-lg min-h-[60vh]">
+      <form
+        onSubmit={handleSubmit}
+        className=" bg-base-200 shadow-xs rounded-lg min-h-[60vh]"
+      >
         <div className="card bg-base-100 w-md ">
           <div className="card-body ">
             <fieldset className="fieldset space-y-3">
@@ -16,6 +28,7 @@ const LoginPage = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 className="input bg-[#E7E7E7] border-none w-full"
                 placeholder="Enter your email address"
               />
@@ -24,6 +37,7 @@ const LoginPage = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 className="input bg-[#E7E7E7] border-none w-full"
                 placeholder="Enter your password"
               />
