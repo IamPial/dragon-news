@@ -22,7 +22,7 @@ const NewsCategoryPage = async ({ params }) => {
         <div>
           {news.length === 0 ? (
             <h2 className="text-5xl text-center my-20 font-bold text-gray-500">
-              No Data Found
+              News aren&apos;t available
             </h2>
           ) : (
             news.map((n) => {
